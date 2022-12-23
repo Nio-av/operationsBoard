@@ -1,5 +1,14 @@
 # OperationsBoard
 
+
+Instruction of first steps:
+- [Basic](https://medium.com/joolsoftware/how-to-set-up-an-angular-cli-project-with-docker-compose-a3ec78f179ab)
+- use [nodemanager](https://nodejs.org/en/download/package-manager/)
+- use node 18 via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- use scss
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 ## Development server
