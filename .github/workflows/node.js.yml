@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/setup-node@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      working-directory: ../frontend
+      working-directory: .frontend/
       # with:
       #   node-version: ${{ matrix.node-version }}
       #   cache: 'npm'
