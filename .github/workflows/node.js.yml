@@ -26,24 +26,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      # working-directory: /home/runner/work/operationsBoard/frontend
-      # with:
-      #   node-version: ${{ matrix.node-version }}
-      #   cache: 'npm'
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
     # - run: npm ci
     # - run: npm run build --if-present
     # - run: npm test
 
-      run: |
-        ls
-        npm install -g @angular/cli@6.2.1
-        npm install
-        ng build
-        mkdir -p public
-        mv dist/operations-board/* public/
-        ls
+    - run: cd frontend npm install -g @angular/cli@6.2.1
+    - run: cd frontend npm install
+    - run: cd frontend ng build
+    - run: cd frontend mkdir -p public
+    - run: cd frontend ls dist/operations-board
+    - run: cd frontend mv dist/operations-board/* public/
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
