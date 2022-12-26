@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/setup-node@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      working-directory: /home/runner/work/operationsBoard/frontend
+      # working-directory: /home/runner/work/operationsBoard/frontend
       # with:
       #   node-version: ${{ matrix.node-version }}
       #   cache: 'npm'
@@ -37,6 +37,7 @@ jobs:
     # - run: npm test
 
       run: |
+        ls
         npm install -g @angular/cli@6.2.1
         npm install
         ng build
