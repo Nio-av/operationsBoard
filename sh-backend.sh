@@ -1,0 +1,1 @@
+docker exec -it operationsboard_php_1 /bin/bash

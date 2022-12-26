@@ -13,7 +13,7 @@ For the beginning, this is a local, singel user application.
 Contains user interface
 
 ## Backend
-JSON-Endpoint
+JSON-Endpoint is based on Pimcore.
 
-## Database
-Contains data
+## TODO
+Change Username and Password in docker-compose!!!

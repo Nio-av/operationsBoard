@@ -1,2 +1,5 @@
 database/*
 !**.gitkeep
+
+operationsBoardBackend/pimcore-database/*
+operationsBoardBackend/supervisord.pid
