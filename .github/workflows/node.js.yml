@@ -36,12 +36,13 @@ jobs:
     # - run: npm run build --if-present
     # - run: npm test
 
-    - run: cd frontend npm install -g @angular/cli@6.2.1
-    - run: cd frontend npm install
-    - run: cd frontend ng build
-    - run: cd frontend mkdir -p public
-    - run: cd frontend ls dist/operations-board
-    - run: cd frontend mv dist/operations-board/* public/
+    - run: npm install -g @angular/cli@6.2.1
+    - run: npm install
+    - run: ng build
+    - run: mkdir -p public
+    - run: ls
+    - run: ls dist/operations-board
+    - run: mv dist/operations-board/* public/
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
