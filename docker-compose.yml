@@ -1,7 +1,7 @@
 version: '3.8'
 services: # Here we define our service(s)
     angular-service: # The name of the service
-      container_name: operationsboardcontainer  # Container name
+      container_name: operationsboardfrontend  # Container name
       build: ./frontend/ # Location of our Dockerfile
       volumes: # Volume binding
         - './frontend/:/usr/src/app'
@@ -41,6 +41,7 @@ services: # Here we define our service(s)
     php:
         user: '1000:1000' # set to your uid:gid
         image: pimcore/pimcore:php8.1-debug-latest
+        container_name: operationsboard-phpdebug
         environment:
             COMPOSER_HOME: /var/www/html
             PHP_IDE_CONFIG: serverName=localhost
@@ -52,6 +53,7 @@ services: # Here we define our service(s)
     supervisord:
         user: '1000:1000' # set to your uid:gid
         image: pimcore/pimcore:php8.1-supervisord-latest
+        container_name: operationsboard-phpsupervisored
         depends_on:
             - db
         volumes:

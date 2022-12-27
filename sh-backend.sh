@@ -1,1 +1,1 @@
-docker exec -it operationsboard_php_1 /bin/bash
+docker exec -it operationsboard-phpdebug /bin/bash
