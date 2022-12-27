@@ -3,3 +3,4 @@ database/*
 
 operationsBoardBackend/pimcore-database/*
 operationsBoardBackend/supervisord.pid
+operationsBoardBackend/cache
